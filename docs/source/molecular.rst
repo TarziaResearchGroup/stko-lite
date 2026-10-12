@@ -8,7 +8,6 @@ Atoms, Functional Groups and Molecules
   :maxdepth: 1
 
   PositionedAtom <_autosummary/stko.PositionedAtom>
-  Dummy atom (Du) <_autosummary/stko.Du>
   UnitCell <_autosummary/stko.UnitCell>
   Torsion <_autosummary/stko.Torsion>
   TorsionInfo <_autosummary/stko.TorsionInfo>
@@ -32,8 +31,6 @@ Molecular Analysis
 .. toctree::
   :maxdepth: 1
 
-  MoleculeSplitter <_autosummary/stko.MoleculeSplitter>
-  MoleculeTransformer <_autosummary/stko.MoleculeTransformer>
   DecomposeMOC <_autosummary/stko.molecule_analysis.DecomposeMOC>
   DitopicThreeSiteAnalyser <_autosummary/stko.molecule_analysis.DitopicThreeSiteAnalyser>
   ConstructedAnalyser <_autosummary/stko.molecule_analysis.ConstructedAnalyser>

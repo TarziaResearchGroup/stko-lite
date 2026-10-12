@@ -3,18 +3,14 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "stko"
+name = "stko-lite"
 maintainers = [
     { name = "Andrew Tarzia", email = "andrew.tarzia@gmail.com" },
     { name = "Lukas Turcani", email = "lukasturcani93@gmail.com" },
 ]
 dependencies = [
-    "numpy",
-    "stk",
-    "networkx",
+    "stk-lite",
     "rmsd",
-    "mdanalysis",
-    "openmm",
 ]
 requires-python = ">=3.11"
 dynamic = ["version"]
@@ -22,31 +18,12 @@ readme = "README.rst"
 
 [project.optional-dependencies]
 dev = [
-    "ruff",
-    "mypy",
-    "moldoc",
-    "pytest",
-    "pytest-datadir",
-    "pytest-lazy-fixtures",
-    "pytest-cov",
-    # Only these platforms have wheels; elsewhere gfnff needs a Fortran build.
-    "gfnff>=0.3.0; sys_platform == 'linux' or (sys_platform == 'darwin' and platform_machine == 'arm64')",
-    "sphinx",
-    "sphinx-copybutton",
-    "sphinx-rtd-theme>0.5.1",
-    "twine",
-    "build",
-]
-cuda = [
-    # Added to handle uv issue with metadata.
-    # From https://github.com/astral-sh/uv/issues/15876
-    "torch>=2.8.0",
-    "OpenMM-CUDA-12",
+
 ]
 
 [project.urls]
 github = "https://github.com/JelfsMaterialsGroup/stko"
-documentation = "https://stko-docs.readthedocs.io"
+documentation = "https://stko-lite-docs.readthedocs.io"
 
 [tool.setuptools_scm]
 write_to = "src/stko/_version.py"

@@ -4,7 +4,7 @@ Calculators
 .. toctree::
   :maxdepth: 1
 
-  GeometryAnalyser <_autosummary/stko.molecule_analysis.GeometryAnalyser>
+
   RmsdCalculator <_autosummary/stko.RmsdCalculator>
   RmsdMappedCalculator <_autosummary/stko.RmsdMappedCalculator>
   KabschRmsdCalculator <_autosummary/stko.KabschRmsdCalculator>

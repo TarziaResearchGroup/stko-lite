@@ -10,8 +10,6 @@ from stko import (
 )
 from stko._internal.calculators.extractors.orca_extractor import OrcaExtractor
 from stko._internal.calculators.extractors.xtb_extractor import XTBExtractor
-from stko._internal.calculators.open_babel_calculators import OpenBabelEnergy
-from stko._internal.calculators.orca_calculators import OrcaEnergy
 from stko._internal.calculators.planarity_calculators import (
     PlanarityCalculator,
 )
@@ -43,16 +41,8 @@ from stko._internal.calculators.torsion_calculators import (
 )
 from stko._internal.calculators.xtb_calculators import XTBEnergy
 from stko._internal.internal_types import ConstructedMoleculeT, MoleculeT
-from stko._internal.molecular.atoms.dummy_atom import Du
 from stko._internal.molecular.atoms.positioned_atom import PositionedAtom
-from stko._internal.molecular.conversion.md_analysis import MDAnalysis
 from stko._internal.molecular.conversion.z_matrix import ZMatrix
-from stko._internal.molecular.molecule_modifiers.molecule_splitter import (
-    MoleculeSplitter,
-)
-from stko._internal.molecular.molecule_modifiers.molecule_transformer import (
-    MoleculeTransformer,
-)
 from stko._internal.molecular.networkx.network import Network
 from stko._internal.molecular.periodic.unitcell import UnitCell
 from stko._internal.molecular.periodic.utilities import (
@@ -70,13 +60,6 @@ from stko._internal.molecular.torsion.torsion import Torsion
 from stko._internal.molecular.torsion.torsion_info import TorsionInfo
 from stko._internal.optimizers.aligner import Aligner, AlignmentPotential
 from stko._internal.optimizers.collapser import Collapser, CollapserMC
-from stko._internal.optimizers.gfnff import GFNFFTopo
-from stko._internal.optimizers.gulp import GulpUFFMDOptimizer, GulpUFFOptimizer
-from stko._internal.optimizers.macromodel import (
-    MacroModelForceField,
-    MacroModelMD,
-)
-from stko._internal.optimizers.open_babel import OpenBabel
 from stko._internal.optimizers.optimizers import (
     NullOptimizer,
     Optimizer,
@@ -85,12 +68,7 @@ from stko._internal.optimizers.optimizers import (
     TryCatchOptimizer,
 )
 from stko._internal.optimizers.rdkit import ETKDG, MMFF, UFF, MetalOptimizer
-from stko._internal.optimizers.utilities import (
-    MAEExtractor,
-    get_metal_atoms,
-    mol_from_mae_file,
-    move_generated_macromodel_files,
-)
+from stko._internal.optimizers.utilities import get_metal_atoms
 from stko._internal.optimizers.xtb import XTB, XTBCREST, XTBFF, XTBFFCREST
 from stko._internal.utilities.exceptions import (
     CalculatorError,
@@ -152,7 +130,6 @@ __all__ = [
     "ConversionError",
     "DifferentAtomError",
     "DifferentMoleculeError",
-    "Du",
     "EnergyResults",
     "ExpectedMetalError",
     "ForceFieldError",
@@ -164,24 +141,15 @@ __all__ = [
     "InvalidSolventError",
     "KabschRmsdCalculator",
     "LewisStructureError",
-    "MAEExtractor",
     "MDAnalysis",
     "MMFFEnergy",
-    "MacroModelForceField",
-    "MacroModelMD",
     "MatchedTorsionCalculator",
     "MetalOptimizer",
-    "MoleculeSplitter",
     "MoleculeT",
-    "MoleculeTransformer",
     "Network",
     "NotCompletedError",
     "NotStartedError",
     "NullOptimizer",
-    "OpenBabel",
-    "OpenBabelEnergy",
-    "OpenMMEnergy",
-    "OpenMMForceField",
     "OpenMMMD",
     "OptWriterSequence",
     "Optimizer",
@@ -227,7 +195,6 @@ __all__ = [
     "mol_from_mae_file",
     "molecular_utilities",
     "molecule_analysis",
-    "move_generated_macromodel_files",
     "topology_functions",
     "unit_vector",
     "vector_angle",
