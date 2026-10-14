@@ -704,6 +704,21 @@ wheels = [
 ]
 
 [[package]]
+name = "gfnff"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/88/293d3b9c99f8a3669693a7d9c6777149e64cc563321cd2c99ef6f221764f/gfnff-0.3.0.tar.gz", hash = "sha256:06044345a7143135f97cba973de32b3212036807cc686152c1084d5f59812bb9", size = 935248, upload-time = "2026-10-09T09:14:14.444Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/06/2876ea97d0dd74f80471333f6856c73ccd06f5a4ce80518a0c8968127cd1/gfnff-0.3.0-py3-none-macosx_14_0_arm64.whl", hash = "sha256:df4e1f4d28ce1f85fe5544cbebc03c49485c2f51fdfa17a90bfb3a2d2b2ef359", size = 6701823, upload-time = "2026-10-09T09:14:08.325Z" },
+    { url = "https://files.pythonhosted.org/packages/e4/4c/be8b73c85b7d2c7e6e33577ca47c3c1ed11614bf6d8bedea9f9766a5afb6/gfnff-0.3.0-py3-none-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:b030f8d6c41934995d859e07e76692ecdabf92b70178f40ef620d9910d31dcd5", size = 10642912, upload-time = "2026-10-09T09:14:09.965Z" },
+    { url = "https://files.pythonhosted.org/packages/f2/ce/3eee2ef3e037359f1a2ff45b3d88d11bdf4a9023aaa6c2dc16764065e1bd/gfnff-0.3.0-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:f443d33280b2ec157c41d33de404503482a203b72630838818758e066ccbf818", size = 17835796, upload-time = "2026-10-09T09:14:12.092Z" },
+]
+
+[[package]]
 name = "idna"
 version = "3.20"
 source = { registry = "https://pypi.org/simple" }
@@ -2414,6 +2429,7 @@ wheels = [
 name = "stko-lite"
 source = { editable = "." }
 dependencies = [
+    { name = "gfnff", marker = "(platform_machine == 'arm64' and sys_platform == 'darwin') or sys_platform == 'linux'" },
     { name = "rmsd" },
     { name = "stk-lite" },
 ]
@@ -2437,6 +2453,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "chemiscope", marker = "extra == 'dev'" },
+    { name = "gfnff", marker = "(platform_machine == 'arm64' and sys_platform == 'darwin') or sys_platform == 'linux'", specifier = ">=0.3.0" },
     { name = "moldoc", marker = "extra == 'dev'", specifier = "==3.0.0" },
     { name = "mypy", marker = "extra == 'dev'" },
     { name = "pytest", marker = "extra == 'dev'" },

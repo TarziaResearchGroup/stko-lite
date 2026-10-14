@@ -2,7 +2,6 @@ import logging
 import os
 from pathlib import Path
 
-import aligner_example
 import basic_example
 import cage_analysis_example
 import calculators_example
@@ -23,7 +22,6 @@ def main() -> None:
 
     try:
         intermediates_example.main()
-        aligner_example.main()
         basic_example.main()
         cage_analysis_example.main()
         calculators_example.main()

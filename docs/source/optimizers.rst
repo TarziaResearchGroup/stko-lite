@@ -15,7 +15,6 @@ Optimizers
   OptWriterSequence <_autosummary/stko.OptWriterSequence>
   TryCatchOptimizer <_autosummary/stko.TryCatchOptimizer>
 
-  Aligner <_autosummary/stko.Aligner>
   Collapser <_autosummary/stko.Collapser>
   CollapserMC <_autosummary/stko.CollapserMC>
   ETKDG <_autosummary/stko.ETKDG>

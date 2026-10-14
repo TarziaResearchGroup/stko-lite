@@ -165,18 +165,10 @@ class RmsdMappedCalculator(RmsdCalculator):
             results = calculator.get_results(bb2)
             rmsd  = results.get_rmsd()
 
-            # Align the molecules.
-            optimizer = stko.Aligner(bb1, (('C', 'C'), ))
-            aligned_bb2 = optimizer.optimize(bb2)
-
-            calculator = stko.RmsdMappedCalculator(bb1)
-            results = calculator.get_results(aligned_bb2)
-            rmsd  = results.get_rmsd()
-
         .. testcode:: rmsd-mapped-calc
             :hide:
 
-            assert np.isclose(rmsd, 0.33660089814697003, rtol=0, atol=1E-2)
+            assert np.isclose(rmsd, 0.8389336771414573, rtol=0, atol=1E-2)
 
     """
 
