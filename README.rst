@@ -1,13 +1,19 @@
 :maintainers:
     `andrewtarzia <https://github.com/andrewtarzia/>`_,
     `lukasturcani <https://github.com/lukasturcani/>`_
-:documentation: https://stko-docs.readthedocs.io
+:documentation: https://stko-lite-docs.readthedocs.io
 :discord: https://discord.gg/zbCUzuxe2B
 
 .. figure:: docs/source/_static/stko.png
 
 Overview
 ========
+
+``stko-lite`` is a light-weight version of `stko`_ with mostly the same
+functionality.
+
+.. _`stko`: https://github.com/JelfsMaterialsGroup/stko
+
 
 `stko <https://github.com/JelfsMaterialsGroup/stko>`_ is a Python library for
 performing optimizations and calculations on complex molecules built using
@@ -25,76 +31,34 @@ To get ``stko``, you can install it with pip:
 
 .. code-block:: bash
 
-  pip install stko
+  pip install stko-lite
 
 Some optional dependencies are only available through conda:
 
 .. code-block:: bash
 
-  # for xtb
-  mamba install xtb
-  # for openbabel, assuming you are not using Python >= 3.13!
-  mamba install openbabel
-
-
-With OpenMM
------------
-
-To get ``stko`` and use ``OpenMM``, we had some installation issues. The
-current solution is to first, in a new environment, install the ``OpenMM``
-requirements:
-
-.. code-block:: bash
-
-  mamba install -c conda-forge openff-toolkit
-
-Then install ``stko`` with pip, but with the cuda variant to take advantage
-of GPU speed up (note that this is a heavy installation!).
-
-.. code-block:: bash
-
-  pip install stko[cuda]
-
-We also removed the default installation of ``espaloma_charge`` that provides
-the ML-based ``espaloma-am1bcc`` partial charges method. If users want this
-package, create a new environment and install their dependancies (if this
-fails, please check their
-`instructions <https://github.com/choderalab/espaloma-charge>`_), then install
-``stko``:
-
-.. code-block:: bash
-
-    mamba install -c conda-forge espaloma_charge openff-toolkit
-    pip install stko[cuda]
+  # for gfn-ff with topology constrains
+  # This will not work on Windows at this stage
+  # (https://pprcht.github.io/gfnff/python.html)
+  pip install gfnff
 
 
 Developer Setup
 ---------------
 
-1. Install `just`_.
-2. In a new virtual environment run:
+#. Install `just`_.
+#. Install `uv`_.
+#. In the source directory, run::
 
-.. code-block:: bash
+    $ just setup
 
-  just dev
 
-3. Run code checks:
+#. Run code checks::
 
-.. code-block:: bash
-
-  just check
+    $ just check
 
 .. _`just`: https://github.com/casey/just
-
-Examples
-========
-
-We are constantly trying to add examples to the ``examples/`` directory
-and maintain examples in the doc strings of ``Calculator`` and
-``Optimizer`` classes.
-
-``examples/basic_examples.py`` highlights basic optimisation with
-``rdkit``, and ``xtb`` (if you have ``xtb`` available).
+.. _`uv`: https://docs.astral.sh
 
 
 How To Contribute

@@ -2429,7 +2429,6 @@ wheels = [
 name = "stko-lite"
 source = { editable = "." }
 dependencies = [
-    { name = "gfnff", marker = "(platform_machine == 'arm64' and sys_platform == 'darwin') or sys_platform == 'linux'" },
     { name = "rmsd" },
     { name = "stk-lite" },
 ]
@@ -2437,6 +2436,7 @@ dependencies = [
 [package.optional-dependencies]
 dev = [
     { name = "chemiscope" },
+    { name = "gfnff", marker = "(platform_machine == 'arm64' and sys_platform == 'darwin') or sys_platform == 'linux'" },
     { name = "moldoc" },
     { name = "mypy" },
     { name = "pytest" },
@@ -2453,7 +2453,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "chemiscope", marker = "extra == 'dev'" },
-    { name = "gfnff", marker = "(platform_machine == 'arm64' and sys_platform == 'darwin') or sys_platform == 'linux'", specifier = ">=0.3.0" },
+    { name = "gfnff", marker = "(platform_machine == 'arm64' and sys_platform == 'darwin' and extra == 'dev') or (sys_platform == 'linux' and extra == 'dev')", specifier = ">=0.3.0" },
     { name = "moldoc", marker = "extra == 'dev'", specifier = "==3.0.0" },
     { name = "mypy", marker = "extra == 'dev'" },
     { name = "pytest", marker = "extra == 'dev'" },

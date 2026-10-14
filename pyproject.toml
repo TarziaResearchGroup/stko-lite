@@ -11,8 +11,6 @@ maintainers = [
 dependencies = [
     "stk-lite",
     "rmsd",
-    # Only these platforms have wheels; elsewhere gfnff needs a Fortran build.
-    "gfnff>=0.3.0; sys_platform == 'linux' or (sys_platform == 'darwin' and platform_machine == 'arm64')",
 ]
 requires-python = ">=3.11"
 dynamic = ["version"]
@@ -32,6 +30,8 @@ dev = [
     "sphinx-rtd-theme",
     "chemiscope",
     "moldoc==3.0.0",
+    # Only these platforms have wheels; elsewhere gfnff needs a Fortran build.
+    "gfnff>=0.3.0; sys_platform == 'linux' or (sys_platform == 'darwin' and platform_machine == 'arm64')",
 ]
 
 [project.urls]
