@@ -32,8 +32,8 @@ check:
   echo
   ( set -x; uv run pytest --cov=src --cov-report term-missing )
 
-  #echo
-  #( set -x; uv run make -C docs doctest )
+  echo
+  ( set -x; uv run make -C docs doctest )
 
   test $error = 0
 

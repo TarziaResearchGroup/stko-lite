@@ -22,12 +22,4 @@ Optimizers
   MMFF <_autosummary/stko.MMFF>
   MetalOptimizer <_autosummary/stko.MetalOptimizer>
 
-  XTB <_autosummary/stko.XTB>
-  XTBFF <_autosummary/stko.XTBFF>
-  XTBCREST <_autosummary/stko.XTBCREST>
-  XTBFFCREST <_autosummary/stko.XTBFFCREST>
   GFNFFTopo <_autosummary/stko.GFNFFTopo>
-
-  GulpUFFMDOptimizer <_autosummary/stko.GulpUFFMDOptimizer>
-  MacroModelMD <_autosummary/stko.MacroModelMD>
-  OpenMMMD <_autosummary/stko.OpenMMMD>

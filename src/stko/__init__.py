@@ -1,21 +1,16 @@
 """Molecular optimisers and property calculators for use with :mod:`stk`."""
 
-import contextlib
-
 from stko import (
     functional_groups,
     molecular_utilities,
     molecule_analysis,
     topology_functions,
 )
-from stko._internal.calculators.extractors.orca_extractor import OrcaExtractor
-from stko._internal.calculators.extractors.xtb_extractor import XTBExtractor
 from stko._internal.calculators.planarity_calculators import (
     PlanarityCalculator,
 )
 from stko._internal.calculators.rdkit_calculators import MMFFEnergy, UFFEnergy
 from stko._internal.calculators.results.energy_results import EnergyResults
-from stko._internal.calculators.results.orca_results import OrcaResults
 from stko._internal.calculators.results.planarity_results import (
     PlanarityResults,
 )
@@ -25,7 +20,6 @@ from stko._internal.calculators.results.torsion_results import (
     ConstructedMoleculeTorsionResults,
     TorsionResults,
 )
-from stko._internal.calculators.results.xtb_results import XTBResults
 from stko._internal.calculators.rmsd_calculators import (
     KabschRmsdCalculator,
     RmsdCalculator,
@@ -39,7 +33,6 @@ from stko._internal.calculators.torsion_calculators import (
     MatchedTorsionCalculator,
     TorsionCalculator,
 )
-from stko._internal.calculators.xtb_calculators import XTBEnergy
 from stko._internal.internal_types import ConstructedMoleculeT, MoleculeT
 from stko._internal.molecular.atoms.positioned_atom import PositionedAtom
 from stko._internal.molecular.conversion.z_matrix import ZMatrix
@@ -69,7 +62,6 @@ from stko._internal.optimizers.optimizers import (
 )
 from stko._internal.optimizers.rdkit import ETKDG, MMFF, UFF, MetalOptimizer
 from stko._internal.optimizers.utilities import get_metal_atoms
-from stko._internal.optimizers.xtb import XTB, XTBCREST, XTBFF, XTBFFCREST
 from stko._internal.utilities.exceptions import (
     CalculatorError,
     ConvergenceError,
@@ -99,11 +91,6 @@ from stko._internal.utilities.utilities import (
     vector_angle,
 )
 
-with contextlib.suppress(ImportError):
-    from stko._internal.calculators.openmm_calculators import OpenMMEnergy
-    from stko._internal.optimizers.openmm import OpenMMForceField, OpenMMMD
-
-
 MoleculeT = MoleculeT  # noqa: PLW0127
 """Type parameter matching any :class:`stk.Molecule` or subclasses."""
 
@@ -114,10 +101,6 @@ __all__ = [
     "ETKDG",
     "MMFF",
     "UFF",
-    "XTB",
-    "XTBCREST",
-    "XTBFF",
-    "XTBFFCREST",
     "Aligner",
     "AlignmentPotential",
     "CalculatorError",
@@ -135,8 +118,6 @@ __all__ = [
     "ForceFieldError",
     "ForceFieldSetupError",
     "GFNFFTopo",
-    "GulpUFFMDOptimizer",
-    "GulpUFFOptimizer",
     "InputError",
     "InvalidSolventError",
     "KabschRmsdCalculator",
@@ -150,14 +131,10 @@ __all__ = [
     "NotCompletedError",
     "NotStartedError",
     "NullOptimizer",
-    "OpenMMMD",
     "OptWriterSequence",
     "Optimizer",
     "OptimizerError",
     "OptimizerSequence",
-    "OrcaEnergy",
-    "OrcaExtractor",
-    "OrcaResults",
     "PathError",
     "PlanarityCalculator",
     "PlanarityResults",
@@ -178,9 +155,6 @@ __all__ = [
     "UFFEnergy",
     "UnitCell",
     "WrapperNotInstalledError",
-    "XTBEnergy",
-    "XTBExtractor",
-    "XTBResults",
     "ZMatrix",
     "calculate_angle",
     "calculate_dihedral",

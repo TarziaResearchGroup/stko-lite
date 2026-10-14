@@ -15,14 +15,25 @@ dependencies = [
 requires-python = ">=3.11"
 dynamic = ["version"]
 readme = "README.rst"
+description = "Automatic molecular optimisation and analysis."
 
 [project.optional-dependencies]
 dev = [
-
+    "ruff",
+    "mypy",
+    "pytest",
+    "pytest-datadir",
+    "pytest-lazy-fixtures",
+    "pytest-cov",
+    "sphinx",
+    "sphinx-copybutton",
+    "sphinx-rtd-theme",
+    "chemiscope",
+    "moldoc==3.0.0",
 ]
 
 [project.urls]
-github = "https://github.com/JelfsMaterialsGroup/stko"
+github = "https://github.com/TarziaResearchGroup/stko"
 documentation = "https://stko-lite-docs.readthedocs.io"
 
 [tool.setuptools_scm]

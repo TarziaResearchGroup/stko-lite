@@ -69,6 +69,5 @@ Conversion
 .. toctree::
   :maxdepth: 1
 
-  MDAnalysis <_autosummary/stko.MDAnalysis>
   ZMatrix <_autosummary/stko.ZMatrix>
   Network <_autosummary/stko.Network>

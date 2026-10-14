@@ -7,11 +7,8 @@
    Molecular <molecular>
    Calculators <calculators>
    Optimizers <optimizers>
-   Cage optimisation workflow <cage_optimisation>
-   Host-guest optimisation <hg_optimisation>
    Using the topology for GFN-FF optimisation <using_topology_for_opt>
    Cage analysis <cage_analysis>
-   Helpers <helpers>
 
 
 .. toctree::
