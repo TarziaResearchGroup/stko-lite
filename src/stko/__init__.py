@@ -54,6 +54,7 @@ from stko._internal.molecular.torsion.torsion_info import TorsionInfo
 from stko._internal.optimizers.aligner import Aligner, AlignmentPotential
 from stko._internal.optimizers.collapser import Collapser, CollapserMC
 from stko._internal.optimizers.optimizers import (
+    FileIOOptimizer,
     NullOptimizer,
     Optimizer,
     OptimizerSequence,
@@ -115,6 +116,7 @@ __all__ = [
     "DifferentMoleculeError",
     "EnergyResults",
     "ExpectedMetalError",
+    "FileIOOptimizer",
     "ForceFieldError",
     "ForceFieldSetupError",
     "GFNFFTopo",
