@@ -1,7 +1,7 @@
 :maintainers:
     `andrewtarzia <https://github.com/andrewtarzia/>`_,
     `lukasturcani <https://github.com/lukasturcani/>`_
-:documentation: https://stko-lite-docs.readthedocs.io
+:documentation: https://stko-lite.readthedocs.io
 :discord: https://discord.gg/zbCUzuxe2B
 
 .. figure:: docs/source/_static/stko.png
