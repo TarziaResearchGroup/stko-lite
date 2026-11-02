@@ -32,6 +32,7 @@ dev = [
     "moldoc==3.0.0",
     # Only these platforms have wheels; elsewhere gfnff needs a Fortran build.
     "gfnff>=0.3.0; sys_platform == 'linux' or (sys_platform == 'darwin' and platform_machine == 'arm64')",
+    "matplotlib",
 ]
 
 [project.urls]
